@@ -9,7 +9,7 @@
 
   ## binary digit -> bit
 
-    |x|x|x|x|x|x|x|x|
+     |x|x|x|x|x|x|x|x|
       0 0 0 0 0 0 0 0
       0 0 0 0 0 0 0 1
       ...
@@ -21,11 +21,11 @@
     -> 0 --- positive
     -> 1 --- negative
        0 0 0 0 0 0 0 1 (1)
-       1 1 1 1 1 1 1 0
+       1 1 1 1 1 1 1 0 (reserve)
      + 1 1 1 1 1 1 1 1
-     +               1
+     +               1 (add one)
      ----------------------
-    (1)0 0 0 0 0 0 0 0
+    (1)0 0 0 0 0 0 0 0 (get rangeOver)
 
     0 1 1 1 1 1 1 1 (2^7-1) =>127
     ...
@@ -38,7 +38,7 @@
     1 0 0 0 0 0 0 1 (-127)
     1 0 0 0 0 0 0 0 (-2^7) => -128
 
-## coutChar.cpp:
+ ## coutChar.cpp:
     #include <iostream>
     using namespace std;
     int main() {
@@ -46,4 +46,4 @@
         short s = ch;
         cout << s << endl;
     }
-
+    //test output >> 65
