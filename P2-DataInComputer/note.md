@@ -66,7 +66,13 @@
     1   0.5    0.25   0.125  0.0625
  ## float(floating point number):
     |sign|   exp     |fractional parts|
-     ^1bit   ^8bit        ^23bit(start 2^(-1) integer fixed is 1)
+    ^1bit   ^8bit        ^23bit(start 2^(-1) integer fixed is 1)
     calc-style:
-       (-1)^s * 1.f * 2^(exp - 127)
-
+    (-1)^s * 1.f * 2^(exp - 127)
+    e.g:7.00 * 2^0 (exp:-127~128)
+        3.50 * 2^1
+        1.75 * 2^2
+ ## int2float:
+    int i = 5;
+    float f = i;
+    cout << f << endl;
