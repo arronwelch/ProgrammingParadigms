@@ -4,7 +4,7 @@
 int main() {
   double top = 0.0;
   stack s;
-  StackNew(&s,sizeof(int));
+  StackNew(&s,sizeof(double));
   for(int i=0;i<5;i++) {
     top = i;
     printf("[%d] stack push : %lf\n",i,top);
