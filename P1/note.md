@@ -1,4 +1,4 @@
-# [Programming Paradigms](https://see.stanford.edu/course/cs107)
+# Programming Paradigms
 stanford engineering
 CS 107 - Lecture 1
 Jerry Cain, Lecturer
