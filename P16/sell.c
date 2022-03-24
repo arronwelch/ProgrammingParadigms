@@ -17,20 +17,27 @@ void SellTickets(int agent, int *nonTicketsp, semaphore lock)
 }
 
 char buffer[8];
+Semaphore emptyBuffers(8);
+Semaphore fullBuffers(0);
 
 void Writer()
 {
 	for(int i=0;i<40;i++) {
 		char c =  PrepareRandomChar();
+		SemaphoreWait(emptyBuffer);
 		buffer[i%8] = c;
+		SemaphoreSignal(fullBUffer);
 	}
 }
 
 void Reader()
 {
 	for(int i=0;i<40;i++) {
+		SemaphoreWait(fullBuffer);
 		char c = buffer[i%8];
+		SemaphoreSignal(emptyBuffer);
 		ProccessChar(c);
+		
 	}
 }
 
